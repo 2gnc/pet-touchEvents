@@ -1,16 +1,21 @@
 :root {
 	font-size: 14px;
 	--bgcolor: #252525;
-	--boxcolor: ivory;
+	--boxcolor:  #252525;
 	--colorOne: #E169AB;
 	--colorTwo: #04C9A1;
 	--colorThree: #F2CA46;
 	--colorFour: #21C2D1;
+	--txtColor: ivory;
 }
 
 * {
 	margin: 0;
 	padding: 0;
+}
+
+.isHidden {
+	display: none;
 }
 
 .wrapper {
@@ -24,18 +29,26 @@
 
 .box {
 	background-color: var(--boxcolor);
-	height: 95vh;
+	height: 100vh;
 	max-height: 1000px;
 	max-width: 1000px;
-	width: 95vw;
+	width: 100vw;
 	display: grid;
-	grid-template-columns: 15vw auto 15vw;
-	grid-template-rows: 15vw auto 15vw;
+	grid-template-columns: 20vw auto 20vw;
+	grid-template-rows: 20vw auto 20vw;
+}
+
+p {
+	color: var(--txtColor);
+}
+
+.better {
+	font-size: 1rem;
 }
 
 .elmt {
 	text-align: center;
-	font-size: 1.5rem;
+	font-size: 2.8rem;
 }
 
 .elmt:nth-child(1) {
@@ -51,6 +64,7 @@
 }
 
 .elmt:nth-child(5) {
+	font-family: 'Shadows Into Light', cursive;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

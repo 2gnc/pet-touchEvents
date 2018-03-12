@@ -1,6 +1,31 @@
 window.addEventListener( 'DOMContentLoaded', function( e ){
-	const one = document.getElementById( 'one' );
-	const two = document.getElementById( 'two' );
 
-	console.log( one );
+	const b1 = document.getElementById( 'one' );
+	const b2 = document.getElementById( 'two' );
+	const b3 = document.getElementById( 'three' );
+	const b4 = document.getElementById( 'four' );
+	const b5 = document.getElementById( 'five' );
+	const b6 = document.getElementById( 'six' );
+	const b7 = document.getElementById( 'seven' );
+	const b8 = document.getElementById( 'eigth' );
+	const b9 = document.getElementById( 'nine' );
+	const msg = document.querySelector( 'p' );
+	const better = document.getElementById( 'better' );
+
+	const isLandscape = () => {
+		return window.innerWidth / window.innerHeight > 1 ? true : false;
+	}
+
+	const hider = () => {
+		if ( isLandscape() ) {
+			better.style = ' display: none ';
+		} else {
+			better.style = ' display: auto ';
+		}
+	}
+
+	hider();
+
+	window.addEventListener( 'resize', hider );
+
 });
