@@ -11,10 +11,12 @@ window.addEventListener( 'DOMContentLoaded', function( e ){
 	const b9 = document.getElementById( 'nine' );
 	const msg = document.querySelector( 'p' );
 
-	b2.addEventListener('tap', (e) => {
-		e.stopPropagation();
-		e.preventDefault();
-		msg.innerText = '2';
-	})
+	let mc = new Hammer.Manager(b2);
+	mc.add( new Hammer.Tap({ event: 'singletap' }) );
+
+
+	mc.on("singletap", function(e) {
+		msg.innerText = e.type;
+	});
 
 });
