@@ -71,10 +71,11 @@ html, body {
 						". . . . . . . . . . . . . . ."
 						". . . . . . . . . . . . . . .";
 	justify-content: center;
+	touch-action: none;
 }
 
 .invader_el {
-	outline: 1px solid orange;
+	outline: 1px solid lime;
 	background-color: gold;
 	width: 5vw;
 	height: 5vw;
