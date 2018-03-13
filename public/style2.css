@@ -32,6 +32,7 @@ html, body {
 						"m m m a"
 						;
 		grid-template-rows: 1fr 5fr;
+		padding-bottom: 10vh;
 	}
 
 	h2 {
@@ -49,13 +50,6 @@ html, body {
 	grid-area: m;
 	padding: 1vw;
 }
-
-@media (orientation: landscape) {
-	.main {
-		margin-bottom: 10vh;
-}
-}
-
 
 .invader {
 	display: grid;
