@@ -32,7 +32,7 @@ html, body {
 						"m m m a"
 						;
 		grid-template-rows: 1fr 5fr;
-		padding-bottom: 10vh;
+		/*padding-bottom: 10vh;*/
 	}
 
 	h2 {
@@ -73,7 +73,7 @@ html, body {
 }
 
 .invader_el {
-	outline: 1px solid silver;
+	outline: 1px solid red;
 	width: 5vw;
 	height: 5vw;
 }
