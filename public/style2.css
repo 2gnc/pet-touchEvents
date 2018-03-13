@@ -33,7 +33,6 @@ html, body {
 						"m m m a"
 						;
 		grid-template-rows: 1fr 5fr;
-		/*padding-bottom: 10vh;*/
 	}
 
 	h2 {
@@ -50,6 +49,8 @@ html, body {
 .main {
 	grid-area: m;
 	padding: 1vw;
+	display: grid;
+	align-items: center;
 }
 
 .invader {
@@ -71,14 +72,20 @@ html, body {
 						". . . . . . . . . . . . . . ."
 						". . . . . . . . . . . . . . .";
 	justify-content: center;
-	touch-action: none;
 }
 
 .invader_el {
-	outline: 1px solid lime;
+	outline: 1px solid #FFF5A2;
 	background-color: gold;
 	width: 5vw;
 	height: 5vw;
+}
+
+@media (orientation: landscape) {
+	.invader_el {
+		width: 7vh;
+		height: 7vh;
+}
 }
 
 .invader_el:nth-child(1) {
@@ -265,12 +272,6 @@ html, body {
 	grid-area: h4;
 }
 
-@media (orientation: landscape) {
-	.invader {
-		
-}
-}
-
 .aside {
 	grid-area: a;
 }
@@ -280,7 +281,50 @@ h1 {
 }
 
 h2 {
-	font-size: 1.1rem;
+	font-size: 1.5rem;
 	font-family: var(--textFont);
 	text-align: center;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.perks {
+	font-family: var(--headerFont);
+	display: grid;
+	grid-template-areas: 
+						" aa bb "
+	;
+	grid-auto-rows: auto;
+	padding: 0 5vw;
+}
+
+@media (orientation: landscape) {
+	.perks {
+		grid-template-areas: " aa";
+	}
+
+	.perks__name {
+		margin: 0.5rem 0 0 0;
+		font-size: 1.2rem;
+	}
+
+	.perks__desc {
+		margin-top: 0.5rem;
+	}
+}
+
+.perks__name {
+}
+
+.perks__desc {
+	font-style: italic;
+	color: #FFF5A2;
+}
+
+.perks__desc::before {
+	content: '(';
+}
+
+.perks__desc::after {
+	content: ')';
 }
