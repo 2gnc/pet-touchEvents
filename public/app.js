@@ -11,4 +11,10 @@ window.addEventListener( 'DOMContentLoaded', function( e ){
 	const b9 = document.getElementById( 'nine' );
 	const msg = document.querySelector( 'p' );
 
+	b2.addEventListener('tap', (e) => {
+		e.stopPropagation();
+		e.preventDefault();
+		msg.innerText = '2';
+	})
+
 });

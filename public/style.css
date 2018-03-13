@@ -51,6 +51,7 @@ p {
 .elmt {
 	text-align: center;
 	font-size: 2.8rem;
+	touch-action: none;
 }
 
 .elmt:nth-child(1) {
