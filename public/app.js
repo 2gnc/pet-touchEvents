@@ -10,22 +10,5 @@ window.addEventListener( 'DOMContentLoaded', function( e ){
 	const b8 = document.getElementById( 'eigth' );
 	const b9 = document.getElementById( 'nine' );
 	const msg = document.querySelector( 'p' );
-	const better = document.getElementById( 'better' );
-
-	const isLandscape = () => {
-		return window.innerWidth / window.innerHeight > 1 ? true : false;
-	}
-
-	const hider = () => {
-		if ( isLandscape() ) {
-			better.style = ' display: none ';
-		} else {
-			better.style = ' display: auto ';
-		}
-	}
-
-	hider();
-
-	window.addEventListener( 'resize', hider );
 
 });
