@@ -52,7 +52,7 @@ html, body {
 
 @media (orientation: landscape) {
 	.main {
-		padding: 1vh;
+		padding-bottom: 5vh;
 }
 }
 
@@ -79,7 +79,7 @@ html, body {
 }
 
 .invader_el {
-	outline: 1px solid lime;
+	outline: 1px solid gold;
 	width: 5vw;
 	height: 5vw;
 }
