@@ -14,7 +14,7 @@ html, body {
 
 .wrapper {
 	background-color: var(--bgcolor);
-	height: 100vh;
+	height: 110vh;
 	width: 100vw;
 	display: grid;
 	grid-template-areas: 
@@ -79,7 +79,7 @@ html, body {
 }
 
 .invader_el {
-	outline: 1px solid gold;
+	outline: 1px solid aqua;
 	width: 5vw;
 	height: 5vw;
 }
