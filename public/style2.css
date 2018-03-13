@@ -47,8 +47,15 @@ html, body {
 
 .main {
 	grid-area: m;
-	padding: 1rem;
+	padding: 1vw;
 }
+
+@media (orientation: landscape) {
+	.main {
+		padding: 1vh;
+}
+}
+
 
 .invader {
 	display: grid;
