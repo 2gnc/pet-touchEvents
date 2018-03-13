@@ -52,7 +52,7 @@ html, body {
 
 @media (orientation: landscape) {
 	.main {
-		padding-bottom: 10vh;
+		margin-bottom: 10vh;
 }
 }
 
