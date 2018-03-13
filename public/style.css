@@ -1,94 +1,330 @@
 :root {
-	font-size: 14px;
-	--bgcolor: #252525;
-	--boxcolor:  #252525;
-	--colorOne: #E169AB;
-	--colorTwo: #04C9A1;
-	--colorThree: #F2CA46;
-	--colorFour: #21C2D1;
-	--txtColor: ivory;
+    font-size: 14px;
+    --bgcolor: #252525;
+    --headerFont: 'Kelly Slab', cursive;
+    --textFont: 'Roboto', sans-serif;
+    --headerColor: #FFE400;
 }
 
-* {
+html, body {
 	margin: 0;
 	padding: 0;
+	color: var(--headerColor);
 }
 
 .wrapper {
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	background-color: var(--bgcolor);
-	width: 100vw;
-}
-
-.box {
-	background-color: var(--boxcolor);
 	height: 100vh;
-	max-height: 1000px;
-	max-width: 1000px;
 	width: 100vw;
 	display: grid;
-	grid-template-columns: 20vw auto 20vw;
-	grid-template-rows: 20vw auto 20vw;
-}
-
-p {
-	color: var(--txtColor);
-}
-
-.better {
-	font-size: 1rem;
+	grid-template-areas: 
+						"h h h h"
+						"m m m m"
+						"a a a a"
+						;
+	grid-template-rows: 1fr 4fr 2fr;
+	overflow: hiden;
 }
 
 @media (orientation: landscape) {
-	.better {
-		display: none;
+	.wrapper {
+		grid-template-areas: 
+						"h h h h"
+						"m m m a"
+						;
+		grid-template-rows: 1fr 5fr;
 	}
+
+	h2 {
+		text-align: right;
+	}
+
 }
 
-.elmt {
+.header {
+	grid-area: h;
 	text-align: center;
-	font-size: 2.8rem;
 }
 
-.elmt:nth-child(1) {
-	background: linear-gradient(45deg, var(--colorFour) 50%, var(--colorOne) 50%);
-}
-
-.elmt:nth-child(2) {
-	background-color: var(--colorOne); 
-}
-
-.elmt:nth-child(3) {
-	background: linear-gradient(-45deg, var(--colorTwo) 50%, var(--colorOne) 50%);
-}
-
-.elmt:nth-child(5) {
-	font-family: 'Shadows Into Light', cursive;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+.main {
+	grid-area: m;
+	padding: 1vw;
+	display: grid;
 	align-items: center;
 }
 
-.elmt:nth-child(6) {
-	background-color: var(--colorTwo); 
+.invader {
+	display: grid;
+	grid-template-areas: 
+						". . . . . . . . . . . . . . ."
+						". . . . . . . . . . . . . . ."
+						". . . . a1 . . . . . a2 . . . ."
+						". . . . . b1 . . . b2 . . . . ."
+						". . . . c1 c2 c3 c4 c5 c6 c7 . . . ."
+						". . . d1 d2 . d3 d4 d5 . d6 d7 . . ."
+						". . e1 e2 e3 e4 e5 e6 e7 e8 e9 e10 e11 . ."
+						". . f1 . f2 f3 f4 f5 f6 f7 f8 . f9 . ."
+						". . g1 . g2 . . . . . g3 . g4 . ."
+						". . . . . h1 h2 . h3 h4 . . . . ."
+						". . . . . . . . . . . . . . ."
+						". . . . . . . . . . . . . . ."
+						". . . . . . . . . . . . . . ."
+						". . . . . . . . . . . . . . ."
+						". . . . . . . . . . . . . . .";
+	justify-content: center;
 }
 
-.elmt:nth-child(7) {
-	background: linear-gradient(-45deg, var(--colorThree) 50%, var(--colorFour) 50%);
+.invader_el {
+	outline: 1px solid #FFF5A2;
+	background-color: gold;
+	width: 5vw;
+	height: 5vw;
 }
 
-.elmt:nth-child(8) {
-	background-color: var(--colorThree); 
+@media (orientation: landscape) {
+	.invader_el {
+		width: 7vh;
+		height: 7vh;
+}
 }
 
-.elmt:nth-child(9) {
-	background: linear-gradient(45deg, var(--colorThree) 50%, var(--colorTwo) 50%);
+.invader_el:nth-child(1) {
+	grid-area: a1;
 }
 
-.elmt:nth-child(4) {
-	background-color: var(--colorFour); 
+.invader_el:nth-child(2) {
+	grid-area: a2;
+}
+
+.invader_el:nth-child(3) {
+	grid-area: b1;
+}
+
+.invader_el:nth-child(4) {
+	grid-area: b2;
+}
+
+.invader_el:nth-child(5) {
+	grid-area: c1;
+}
+
+.invader_el:nth-child(6) {
+	grid-area: c2;
+}
+
+.invader_el:nth-child(7) {
+	grid-area: c3;
+}
+
+.invader_el:nth-child(8) {
+	grid-area: c4;
+}
+
+.invader_el:nth-child(9) {
+	grid-area: c5;
+}
+
+.invader_el:nth-child(10) {
+	grid-area: c6;
+}
+
+.invader_el:nth-child(11) {
+	grid-area: c7;
+}
+
+.invader_el:nth-child(12) {
+	grid-area: d1;
+}
+
+.invader_el:nth-child(13) {
+	grid-area: d2;
+}
+
+.invader_el:nth-child(14) {
+	grid-area: d3;
+}
+
+.invader_el:nth-child(15) {
+	grid-area: d4;
+}
+
+.invader_el:nth-child(16) {
+	grid-area: d5;
+}
+
+.invader_el:nth-child(17) {
+	grid-area: d6;
+}
+
+.invader_el:nth-child(18) {
+	grid-area: d7;
+}
+
+.invader_el:nth-child(19) {
+	grid-area: e1;
+}
+
+.invader_el:nth-child(20) {
+	grid-area: e2;
+}
+
+.invader_el:nth-child(21) {
+	grid-area: e3;
+}
+
+.invader_el:nth-child(22) {
+	grid-area: e4;
+}
+
+.invader_el:nth-child(23) {
+	grid-area: e5;
+}
+
+.invader_el:nth-child(24) {
+	grid-area: e6;
+}
+
+.invader_el:nth-child(25) {
+	grid-area: e7;
+}
+
+.invader_el:nth-child(26) {
+	grid-area: e8;
+}
+
+.invader_el:nth-child(27) {
+	grid-area: e9;
+}
+
+.invader_el:nth-child(28) {
+	grid-area: e10;
+}
+
+.invader_el:nth-child(29) {
+	grid-area: e11;
+}
+
+.invader_el:nth-child(30) {
+	grid-area: f1;
+}
+
+.invader_el:nth-child(31) {
+	grid-area: f2;
+}
+
+.invader_el:nth-child(32) {
+	grid-area: f3;
+}
+
+.invader_el:nth-child(33) {
+	grid-area: f4;
+}
+
+.invader_el:nth-child(34) {
+	grid-area: f5;
+}
+
+.invader_el:nth-child(35) {
+	grid-area: f6;
+}
+
+.invader_el:nth-child(36) {
+	grid-area: f7;
+}
+
+.invader_el:nth-child(37) {
+	grid-area: f8;
+}
+
+.invader_el:nth-child(38) {
+	grid-area: f9;
+}
+
+.invader_el:nth-child(39) {
+	grid-area: g1;
+}
+
+.invader_el:nth-child(40) {
+	grid-area: g2;
+}
+
+.invader_el:nth-child(41) {
+	grid-area: g3;
+}
+
+.invader_el:nth-child(42) {
+	grid-area: g4;
+}
+
+.invader_el:nth-child(43) {
+	grid-area: h1;
+}
+
+.invader_el:nth-child(44) {
+	grid-area: h2;
+}
+
+.invader_el:nth-child(45) {
+	grid-area: h3;
+}
+
+.invader_el:nth-child(46) {
+	grid-area: h4;
+}
+
+.aside {
+	grid-area: a;
+}
+
+h1 {
+	font-family: var(--headerFont);
+}
+
+h2 {
+	font-size: 1.5rem;
+	font-family: var(--textFont);
+	text-align: center;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.perks {
+	font-family: var(--headerFont);
+	display: grid;
+	grid-template-areas: 
+						" aa bb "
+	;
+	grid-auto-rows: auto;
+	padding: 0 5vw;
+}
+
+@media (orientation: landscape) {
+	.perks {
+		grid-template-areas: " aa";
+	}
+
+	.perks__name {
+		margin: 0.5rem 0 0 0;
+		font-size: 1.2rem;
+	}
+
+	.perks__desc {
+		margin-top: 0.5rem;
+	}
+}
+
+.perks__name {
+}
+
+.perks__desc {
+	font-style: italic;
+	color: #FFF5A2;
+}
+
+.perks__desc::before {
+	content: '(';
+}
+
+.perks__desc::after {
+	content: ')';
 }
