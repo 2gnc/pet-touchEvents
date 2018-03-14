@@ -64,7 +64,7 @@ html, body {
 						". . . . a1 . . . . . a2 . . . ."
 						". . . . . b1 . . . b2 . . . . ."
 						". . . . c1 c2 c3 c4 c5 c6 c7 . . . ."
-						". . . d1 d2 . d3 d4 d5 . d6 d7 . . ."
+						". . . d1 d2 . d3 d4 d5 e d6 d7 . . ."
 						". . e1 e2 e3 e4 e5 e6 e7 e8 e9 e10 e11 . ."
 						". . f1 . f2 f3 f4 f5 f6 f7 f8 . f9 . ."
 						". . g1 . g2 . . . . . g3 . g4 . ."
@@ -75,6 +75,50 @@ html, body {
 						". . . . . . . . . . . . . . ."
 						". . . . . . . . . . . . . . .";
 	justify-content: center;
+}
+
+.invader__terminator {
+	grid-template-areas: 
+						". . . . . . . . . . . . . . ."
+						". . . . . . . . . . . . . . ."
+						". . . . a1 . . . . . a2 . . . ."
+						". . . . . b1 . . . b2 . . . . ."
+						". . g1 . c1 c2 c3 c4 c5 c6 c7 . . . ."
+						". . f1 d1 d2 . d3 d4 d5 e d6 d7 . . ."
+						". . e1 e2 e3 e4 e5 e6 e7 e8 e9 e10 e11 . ."
+						". . . . f2 f3 f4 f5 f6 f7 f8 . f9 . ."
+						". . . . g2 . . . . . g3 . g4 . ."
+						". . . . . h1 h2 . h3 h4 . . . . ."
+						". . . . . . . . . . . . . . ."
+						". . . . . . . . . . . . . . ."
+						". . . . . . . . . . . . . . ."
+						". . . . . . . . . . . . . . ."
+						". . . . . . . . . . . . . . .";
+}
+
+.eye {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-area: e;
+}
+
+.eye__inner {
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	background-color: red;
+	border-radius: 50%;
+}
+
+.eye_terminator {
+	visibility: visible;
+	transition-property: all;
+	transition-duration: 1s;
+	transition-timing-function: linear;
+	transition-delay: 0.5s;
+	width: 75%;
+	height: 75%;
 }
 
 .invader_runningL {
