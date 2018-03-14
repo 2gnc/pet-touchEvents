@@ -80,9 +80,9 @@ window.addEventListener( 'DOMContentLoaded', ( e ) => {
         if ( !isPoo ) {
             isPoo = true;
             invader.classList.toggle( 'invader_poo' );
-            // setTimeout( () => {
-            //     poo.style = "visibility: visible"
-            // }, 3000 )
+            setTimeout( () => {
+                poo.style = "visibility: visible"
+            }, 3000 )
             setTimeout( () => {
                 isPoo = false;
                 invader.classList.toggle( 'invader_poo' );
