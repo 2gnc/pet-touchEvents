@@ -13,7 +13,7 @@ window.addEventListener( 'DOMContentLoaded', ( e ) => {
     const Press = new Hammer.Press({
         time: 300
     })
-    const Rotate = new Hammer.Rotate();
+    const Pinch = new Hammer.Pinch();
 
 	let isGunman = false;
     let isRunning = false;
@@ -22,7 +22,7 @@ window.addEventListener( 'DOMContentLoaded', ( e ) => {
 	manager.add(DoubleTap);
     manager.add(Swipe);
     manager.add(Press);
-    manager.add(Rotate);
+    manager.add(Pinch);
 
 	manager.on( 'doubletap', (e) => {
         if (!isGunman) {
@@ -74,7 +74,7 @@ window.addEventListener( 'DOMContentLoaded', ( e ) => {
         }
     } )
 
-    manager.on( 'rotate', (e) => {
+    manager.on( 'pinch', (e) => {
         invaderEls[0].innerHTML="oO";
     } )
 
