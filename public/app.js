@@ -74,7 +74,7 @@ window.addEventListener( 'DOMContentLoaded', ( e ) => {
         }
     } )
 
-    invader.on( 'rotate', (e) => {
+    manager.on( 'rotate', (e) => {
         invaderEls[0].innerHTML="oO";
     } )
 
