@@ -86,7 +86,7 @@ window.addEventListener( 'DOMContentLoaded', ( e ) => {
             setTimeout( () => {
                 isPoo = false;
                 invader.classList.toggle( 'invader_poo' );
-                poo.style = "visibility: hidden"
+                //poo.style = "visibility: hidden"
             }, 5000 );
         }
     } )
