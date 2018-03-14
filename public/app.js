@@ -82,11 +82,11 @@ window.addEventListener( 'DOMContentLoaded', ( e ) => {
             invader.classList.toggle( 'invader_poo' );
             setTimeout( () => {
                 poo.style = "visibility: visible"
-            }, 3000 )
+            }, 2000 )
             setTimeout( () => {
                 isPoo = false;
                 invader.classList.toggle( 'invader_poo' );
-                //poo.style = "visibility: hidden"
+                poo.style = "visibility: hidden"
             }, 5000 );
         }
     } )
