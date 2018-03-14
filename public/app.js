@@ -82,7 +82,7 @@ window.addEventListener( 'DOMContentLoaded', ( e ) => {
             invader.classList.toggle( 'invader_poo' );
             setTimeout( () => {
                 poo.style = "visibility: visible"
-            }, 2000 )
+            }, 1000 )
             setTimeout( () => {
                 isPoo = false;
                 invader.classList.toggle( 'invader_poo' );

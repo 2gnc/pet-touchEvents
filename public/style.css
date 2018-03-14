@@ -98,12 +98,37 @@ html, body {
 }
 
 .invader_poo {
-	animation: poo 4s steps(4);
+	animation: shake 0.5s linear;
+	animation: poo 4s steps(4) 1s;
 }
 
 @keyframes poo {
 	100% {
 		transform: translateX( -120% );
+	}
+}
+
+@keyframes shake {
+	10% {
+		transform: translateX( -10% );
+	}
+	20% {
+		transform: translateX( 10% );
+	}
+	35% {
+		transform: translateX( -10% );
+	}
+	50% {
+		transform: translateX( 10% );
+	}
+	65% {
+		transform: translateX( -10% );
+	}
+	80%  {
+		transform: translateX( 10% );
+	}
+	100% {
+		transform: translateX( 0% );
 	}
 }
 
@@ -161,7 +186,7 @@ html, body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	outline: 1px solid red /*#FFF5A2*/;
+	outline: 1px solid #FFF5A2;
 	background-color: gold;
 	width: 5vw;
 	height: 5vw;
