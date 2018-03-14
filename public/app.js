@@ -1,6 +1,7 @@
 window.addEventListener( 'DOMContentLoaded', ( e ) => {
 	const invader = document.querySelector( '.invader' );
     const eye = document.querySelector( '.eye__inner' );
+    const poo = document.querySelector( '.poo' );
 	const invaderEls = document.querySelectorAll( '.invader_el' );
 	const manager = new Hammer.Manager( invader );
 	const DoubleTap = new Hammer.Tap({
@@ -64,10 +65,10 @@ window.addEventListener( 'DOMContentLoaded', ( e ) => {
     manager.on( 'press', ( e ) => {
         if ( !isTerminator ) {
             isTerminator = true;
-            invader.classList.toggle( 'invader__terminator' );
+            invader.classList.toggle( 'invader_terminator' );
             eye.classList.toggle( 'eye_terminator' );
             setTimeout( () => {
-                invader.classList.toggle( 'invader__terminator' );
+                invader.classList.toggle( 'invader_terminator' );
                 eye.classList.toggle( 'eye_terminator' );
                 isTerminator = false;
             }, 2100 )
@@ -75,7 +76,9 @@ window.addEventListener( 'DOMContentLoaded', ( e ) => {
     } )
 
     manager.on( 'pinch', (e) => {
-        invaderEls[0].innerHTML="oO";
+        setTimeout( () => {
+            poo.style = "visibility: visible"
+        }, 1000 )
     } )
 
 })
