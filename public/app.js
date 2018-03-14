@@ -19,6 +19,7 @@ window.addEventListener( 'DOMContentLoaded', ( e ) => {
 	let isGunman = false;
     let isRunning = false;
     let isTerminator = false;
+    let isPoo = false
 
 	manager.add(DoubleTap);
     manager.add(Swipe);
@@ -76,9 +77,18 @@ window.addEventListener( 'DOMContentLoaded', ( e ) => {
     } )
 
     manager.on( 'pinch', (e) => {
-        setTimeout( () => {
-            poo.style = "visibility: visible"
-        }, 1000 )
+        if ( !isPoo ) {
+            isPoo = true;
+            invader.classList.toggle( 'invader_poo' );
+            setTimeout( () => {
+                poo.style = "visibility: visible"
+            }, 1000 )
+            setTimeout( () => {
+                isPoo = false;
+                invader.classList.toggle( 'invader_poo' );
+                poo.style = "visibility: hidden"
+            }, 5000 );
+        }
     } )
 
 })
