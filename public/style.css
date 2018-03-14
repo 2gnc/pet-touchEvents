@@ -109,22 +109,22 @@ html, body {
 
 @keyframes shake {
 	10% {
-		transform: translateX( -10% );
+		transform: translateX( -3% );
 	}
 	20% {
-		transform: translateX( 10% );
+		transform: translateX( 3% );
 	}
 	35% {
-		transform: translateX( -10% );
+		transform: translateX( -3% );
 	}
 	50% {
-		transform: translateX( 10% );
+		transform: translateX( 3% );
 	}
 	65% {
-		transform: translateX( -10% );
+		transform: translateX( -3% );
 	}
 	80%  {
-		transform: translateX( 10% );
+		transform: translateX( 3% );
 	}
 	100% {
 		transform: translateX( 0% );
