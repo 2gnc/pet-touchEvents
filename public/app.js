@@ -22,6 +22,8 @@ window.addEventListener( 'DOMContentLoaded', ( e ) => {
     manager.add(Swipe);
     manager.add(Press);
 
+    hammertime.get('pinchout').set({ enable: true });
+
 	manager.on( 'doubletap', (e) => {
         if (!isGunman) {
             isGunman = true;
