@@ -98,8 +98,7 @@ html, body {
 }
 
 .invader_poo {
-	animation: shake 0.5s linear;
-	animation: poo 4s steps(4) 1s;
+	animation: shake 0.5s linear, poo 4s steps(4) 1s;
 }
 
 @keyframes poo {
