@@ -34,6 +34,7 @@ window.addEventListener( 'DOMContentLoaded', ( e ) => {
 
 	invHammer.on( 'swipeleft', (e) => {
 		console.log( 'swipe left' );
+		invaderEls[0].innerHTML = 'ttt';
 	} )
 
 })
