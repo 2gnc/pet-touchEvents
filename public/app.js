@@ -8,15 +8,15 @@ window.addEventListener( 'DOMContentLoaded', ( e ) => {
 	});
 	const guns = document.querySelectorAll( '.fa-star' );
 
-    let hammer = new Hammer( invader );
+    const Swipe = new Hammer.Swipe();
 
 	let isGunman = false;
+    let isRunning = false;
 
 	manager.add(DoubleTap);
+    manager.add(Swipe);
 
-	console.log( invaderEls  );
-
-	manager.on('doubletap', (e) => {
+	manager.on( 'doubletap', (e) => {
         if (!isGunman) {
             isGunman = true;
             guns.forEach( (item)=> {
@@ -31,14 +31,26 @@ window.addEventListener( 'DOMContentLoaded', ( e ) => {
         }
     })
 
-    hammer.on( 'panleft', (e) => {
-        invaderEls[0].innerHTML = 'pa';
-        console.log('pa');
+    manager.on( 'swipeleft', (e) => {
+        if( !isRunning ) {
+            isRunning = true;
+            invader.classList.toggle( 'invader_runningL' );
+            setTimeout( () => {
+                invader.classList.toggle( 'invader_runningL' );
+                isRunning = false;
+            }, 2000 );
+        }
     } )
 
-    hammer.on( 'swipeleft', (e) => {
-        invaderEls[1].innerHTML = 'vs';
-        console.log('sv');
+    manager.on( 'swiperight', (e) => {
+        if( !isRunning ) {
+            isRunning = true;
+            invader.classList.toggle( 'invader_runningR' );
+            setTimeout( () => {
+                invader.classList.toggle( 'invader_runningR' );
+                isRunning = false;
+            }, 2000 );
+        }
     } )
 
 })

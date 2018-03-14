@@ -55,6 +55,8 @@ html, body {
 }
 
 .invader {
+	position: relative;
+	z-index: 1;
 	display: grid;
 	grid-template-areas: 
 						". . . . . . . . . . . . . . ."
@@ -73,6 +75,20 @@ html, body {
 						". . . . . . . . . . . . . . ."
 						". . . . . . . . . . . . . . .";
 	justify-content: center;
+}
+
+.invader_runningL {
+	transition-property: transform;
+	transition-duration: 2s;
+	transition-timing-function: ease-in-out;
+	transform: translateX( -110% );
+}
+
+.invader_runningR {
+	transition-property: transform;
+	transition-duration: 2s;
+	transition-timing-function: ease-in-out;
+	transform: translateX( 110% );
 }
 
 .invader_el {
@@ -277,6 +293,9 @@ html, body {
 }
 
 .aside {
+	background-color: var(--bgcolor);
+	position: relative;
+	z-index: 2;
 	grid-area: a;
 }
 
