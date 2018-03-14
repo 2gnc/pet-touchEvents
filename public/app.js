@@ -72,7 +72,7 @@ window.addEventListener( 'DOMContentLoaded', ( e ) => {
                 invader.classList.toggle( 'invader_terminator' );
                 eye.classList.toggle( 'eye_terminator' );
                 isTerminator = false;
-            }, 2100 )
+            }, 3100 )
         }
     } )
 
