@@ -72,4 +72,8 @@ window.addEventListener( 'DOMContentLoaded', ( e ) => {
         }
     } )
 
+    invader.on( 'pinchin', (e) => {
+        invaderEls[0].style="background-color: lime";
+    } )
+
 })
