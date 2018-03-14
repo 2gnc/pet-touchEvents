@@ -1,18 +1,21 @@
 window.addEventListener( 'DOMContentLoaded', ( e ) => {
 	const invader = document.querySelector( '.invader' );
+	const invader2 = document.querySelector( '.invader' );
 	const invaderEls = document.querySelectorAll( '.invader_el' );
 	const manager = new Hammer.Manager( invader );
 	const DoubleTap = new Hammer.Tap({
 		event: 'doubletap',
 		taps: 2
 	});
+
+	let invHammer = new Hammer( invader2 );
+
 	const guns = document.querySelectorAll( '.fa-star' );
 
 	let isGunman = false;
 
-	manager.add(DoubleTap);
-
-	console.log( invaderEls  );
+	manager.add( DoubleTap );
+	
 
 	manager.on('doubletap', (e) => {
         if (!isGunman) {
@@ -28,5 +31,9 @@ window.addEventListener( 'DOMContentLoaded', ( e ) => {
             }, 2200)
         }
     })
+
+	invHammer.on( 'swipeleft', (e) => {
+		console.log( 'swipe left' );
+	} )
 
 })
